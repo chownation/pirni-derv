@@ -2,26 +2,26 @@
 
 = Requirements =
 
-===Pirni, MobileTerminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
+===Pirni, Mobile Terminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
 ===If you are interested in Jailbreaking your device, [http://www.iphonedownloadblog.com/2009/10/11/jailbreak-iphone-blackra1n-tutorial/ click here]===
 
 Required jailbreak apps for *derv* (can be found on Cydia or Rock):
-  * MobileTerminal
+  * [http://code.google.com/p/mobileterminal/ MobileTerminal]
   * [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]
   * root access 
 
-MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+Mobile Terminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
 
 If you don't know what "root access" is, you probably have it.
 
-The following applications _should_ be included in the installation of MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]:
+The following applications _should_ be included in the installation of Mobile Terminal and Pirni:
   * Bourne-Again SHell
   * grep
   * sed
   * libpcap
   * libnet
 
-If these applications are not available from MobileTerminal, attempt to install them using Cydia or Rock.
+If these applications are not available from Mobile Terminal, attempt to install them using Cydia or Rock.
 
 
 = Installation =
@@ -42,7 +42,7 @@ My preferred location to copy the scripts to is:
 {{{
 /private/var/mobile/
 }}}
-Because MobileTerminal defaults to this directory when it is loaded.
+Because Mobile Terminal defaults to this directory when it is loaded.
 
 The five scripts you need to copy are:
   * b4.sh
@@ -56,12 +56,12 @@ Once these files are copied, you can exit the iPhoneBrowser / SSH client.
 These files only need to be copied to the device once. After they have been copied, the files will remain on the device even after reboot.
 
 
-=== Step 2 : Open MobileTerminal ===
+=== Step 2 : Open Mobile Terminal ===
 
 [http://imgur.com/rbknR.png]
 
 Once these scripts are copied to the iPhone/iPod, we need to execute them.
-From your iPhone/iPod's home screen, open MobileTerminal by tapping on it.
+From your iPhone/iPod's home screen, open Mobile Terminal by tapping on it.
 
 === Step 3 : Login as root ===
 
@@ -115,15 +115,15 @@ We only have to run this command once; after the permissions have been set, they
 
 [http://i.imgur.com/BnJkK.png]
 
-*b4.sh* is the script which initializes [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] with the appropriate filters, router IP address, and dump file name.
+*b4.sh* is the script which initializes Pirni with the appropriate filters, router IP address, and dump file name.
 
 To start this script, simply type:
 {{{
 ./b4.sh
 }}}
-Be sure to include the dot and slash before the *b4.sh* (the ./ tells MobileTerminal to run the file as a bash script).
+Be sure to include the dot and slash before the *b4.sh* (the ./ tells Mobile Terminal to run the file as a bash script).
 
-This will start [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] and show how many packets are captured.
+This will start Pirni and show how many packets are captured.
 
 Note: *b4.sh* can _also_ receive the target's IP address as an argument.  This is useful if you don't want to target an entire network; just one device on the network.
 
@@ -136,7 +136,7 @@ where *192.168.1.2* is the IP address of your target.
 
 === Step 7 : Open a new Terminal and login as root (again) ===
 
-Now, with the b4.sh script running, we need to open a *new* MobileTerminal window.
+Now, with the b4.sh script running, we need to open a *new* Terminal window.
 To do this, simply swipe two fingers (at the same time) to the left (or right).  If done correctly, you should see a new terminal window.
 
 [http://i.imgur.com/ftOg1.png]
