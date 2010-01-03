@@ -1,0 +1,7 @@
+#summary Link to MobileTerminal
+
+= MobileTerminal =
+MobileTerminal is a terminal emulator for iPhones and iPod Touches.
+
+= Site =
+MobileTerminal's site can be found [http://code.google.com/p/mobileterminal/ here]
