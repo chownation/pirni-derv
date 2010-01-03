@@ -5,10 +5,14 @@
 ===Pirni, MobileTerminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
 ===If you are interested in Jailbreaking your device, [http://www.iphonedownloadblog.com/2009/10/11/jailbreak-iphone-blackra1n-tutorial/ click here]===
 
-Other requirements for *derv*:
+Required jailbreak apps for *derv* (can be found on Cydia or Rock):
   * MobileTerminal
   * [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]
   * root access 
+
+MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+
+If you don't know what "root access" is, you probably have it.
 
 The following applications _should_ be included in the installation of MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]:
   * Bourne-Again SHell
@@ -17,18 +21,20 @@ The following applications _should_ be included in the installation of MobileTer
   * libpcap
   * libnet
 
-MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+If these applications are not available from MobileTerminal, attempt to install them using Cydia or Rock.
 
 
 = Installation =
 
-Unfortunately, *derv* is not available through Cydia or Rock at this time.
+=== Step 0 : Introduction ===
 
-However, since *derv* is only a few shell scripts, they simply need to be copied to the device and executed using MobileTerminal.
+Unfortunately, the *derv* scripts are not available through Cydia or Rock at this time.
 
-If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using WinSCP, KiTTy, or some other SSH client.
+However, since *derv* is only a few shell scripts, they simply need to be copied to the device and then executed.
 
-Otherwise you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] to easily copy the files onto the device.
+If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using programs like WinSCP, KiTTy, or some other SSH client.
+
+Otherwise, you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] to easily copy the files onto the device.
 
 === Step 1 : Copy the shell scripts to your device ===
 
@@ -36,7 +42,7 @@ My preferred location to copy the scripts to is:
 {{{
 /private/var/mobile/
 }}}
-Because MobileTerminal defaults to this directory on load.
+Because MobileTerminal defaults to this directory when it is loaded.
 
 The five scripts you need to copy are:
   * b4.sh
@@ -45,9 +51,9 @@ The five scripts you need to copy are:
   * derv-cookie.sh
   * derv-url.sh
 
-Once these files are copied, you can exit iPhoneBrowser or the SSH client.
+Once these files are copied, you can exit the iPhoneBrowser / SSH client.
 
-These files only need to be copied to the device once.  Once they have been copied, they will remain on the device, even after reboot.
+These files only need to be copied to the device once. After they have been copied, the files will remain on the device even after reboot.
 
 
 === Step 2 : Open MobileTerminal ===
