@@ -1,0 +1,17 @@
+#summary How to install derv
+
+= Installation =
+
+Requirements for *derv*:
+  * Jailbroken iPhone or iPod Touch.
+  * Cydia/Rock/Icy Apps:
+  *  * MobileTerminal
+  *  * Pirni
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
