@@ -5,14 +5,13 @@
 ===Pirni, Mobile Terminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
 ===If you are interested in Jailbreaking your device, [http://www.iphonedownloadblog.com/2009/10/11/jailbreak-iphone-blackra1n-tutorial/ click here]===
 
-Required jailbreak apps for *derv* (can be found on Cydia or Rock):
+Required jailbreak apps for *derv*:
   * [http://code.google.com/p/mobileterminal/ MobileTerminal]
   * [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]
   * root access 
 
 Mobile Terminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
-
-If you don't know what "root access" is, you probably have it.
+If you don't know what "root access" is, you probably already have it.
 
 The following applications _should_ be included in the installation of Mobile Terminal and Pirni:
   * Bourne-Again SHell
