@@ -1,12 +1,52 @@
 #summary How to install derv
 
+= Requirements =
+
+===Pirni, MobileTerminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
+
+Other requirements for *derv*:
+  * MobileTerminal
+  * Pirni
+  * root access 
+
+The following applications _should_ be included in the installation of MobileTerminal and Pirni:
+  * Bourne-Again SHell
+  * grep
+  * sed
+  * libpcap
+  * libnet
+
+MobileTerminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+
+
 = Installation =
 
-Requirements for *derv*:
-  * Jailbroken iPhone or iPod Touch.
-  * Cydia/Rock/Icy Apps:
-  *  * MobileTerminal
-  *  * Pirni
+Since *derv* is simply a few shell scripts, they only need to be copied to the device and executed using MobileTerminal.
+
+If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using WinSCP, KiTTy, or some other SSH client.
+Otherwise you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] to easily copy the files onto the device.
+
+=== Step 1 : Copy the shell scripts to your device ===
+
+My preferred location to copy the scripts to is: {{{
+/private/var/mobile/
+}}} Because MobileTerminal defaults to this directory on load.
+
+The five scripts you need to copy are:
+  * b4.sh
+  * derv.sh
+  * derv-pw.sh
+  * derv-cookie.sh
+  * derv-url.sh
+
+Once these files are copied, you can exit iPhoneBrowser or the SSH client.
+
+=== Step 2 : Execute the first script ===
+
+Once these scripts are copied to the iPhone/iPod, we need to execute them.
+From your iPhone/iPod's home screen, open MobileTerminal by tapping on it.
+[http://imgur.com/rbknR.png]
+
 
 
 = Details =
