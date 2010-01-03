@@ -59,7 +59,9 @@ To login as root, type
 su
 }}}
 followed by root's password.  Note: The screen will not acknowledge that you are typing the password, but it is receiving the key presses.
+
 _The default password for root is *alpine*_
+
 _Having a default password for root is dangerous, you should change the password ASAP using the command:_
 {{{
 passwd
