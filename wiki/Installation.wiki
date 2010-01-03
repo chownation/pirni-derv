@@ -30,7 +30,7 @@ Otherwise you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] 
 
 My preferred location to copy the scripts to is: 
 {{{
-    /private/var/mobile/
+/private/var/mobile/
 }}}
 Because MobileTerminal defaults to this directory on load.
 
@@ -56,15 +56,14 @@ From your iPhone/iPod's home screen, open MobileTerminal by tapping on it.
 
 To login as root, type 
 {{{
-    su
+su
 }}}
 followed by root's password.  Note: The screen will not acknowledge that you are typing the password, but it is receiving the key presses.
 _The default password for root is *alpine*_
-_Having a default password for root is dangerous, I suggest changing the password using the 
+_Having a default password for root is dangerous, you should change the password ASAP using the command:_
 {{{
-    passwd
+passwd
 }}}
-command as soon as possible.
 
 === Step 4 : Make sure we are in the correct directory ===
 
@@ -80,6 +79,87 @@ If they aren't found in the current directory, they _could_ be in the directory:
     /var/mobile/derv/
 }}}
 
-Navigate until MobileTerminal's current directory contains the 5derv scripts.
+Navigate until MobileTerminal's current directory contains the 5 derv scripts.
 
 === Step 5 : Change permissions ===
+
+[http://i.imgur.com/rRZYm.png]
+
+By default, the scripts will not have proper file permissions to be run by root.
+We can fix this problem with a one-liner:
+{{{
+chmod 777 *.sh
+}}}
+We only have to run this command once; after the permissions have been set once, they remain that way, even after reboot.
+
+=== Step 6 : Run the first script ===
+
+[http://i.imgur.com/BnJkK.png]
+
+*b4.sh* is the script which initializes Pirni with the appropriate filters, router IP address, and dump file name.
+
+To start this script, simply type:
+{{{
+./b4.sh
+}}}
+Be sure to include the dot and slash before the *b4.sh* (the ./ tells MobileTerminal to run the file as a bash script).
+
+This will start pirni and show how many packets are captured.
+
+=== Step 7 : Open a new Terminal and login as root (again) ===
+
+Now, with the b4.sh script running, we need to open a *new* MobileTerminal window.
+To do this, simply swipe two fingers (at the same time) to the left (or right).  If done correctly, you should see a new terminal window.
+
+[http://i.imgur.com/ftOg1.png]
+
+We will need to login as root in this new terminal window as well! In case you don't remember how, type:
+{{{
+su
+}}}
+then your password ... default is *alpine*, but you've already changed that, haven't you? :)
+
+=== Step 8 : Run the second script ===
+
+[http://i.imgur.com/DSXX9.png]
+
+In this new terminal window, now that you are logged in as root, you can run derv.sh!
+This script accepts arguments, so you can narrow-down what you want to filter from the sniffed packets.
+{{{
+./derv.sh [options]
+}}}
+
+The options include:
+  * -u       _prints out URLs as they are visited_
+  * -p       _prints out plain-text passwords as they are received_
+  * -c       _intercepts and injects certain cookies into the device's Safari's cookies file_
+  * restore  _restores cookies_
+  * -d       _filters through the packet file *once* and does not delete anything. Useful if you want to see what's in the packet dump file, but don't want to lose the data._
+
+
+All of these options (except *restore*) can be used in combination with one another.
+For example, if you wanted *derv* to only display plaintext passwords and URLs, then you would type:
+{{{
+./derv.sh -p -u
+}}}
+
+Or to have *derv* only read the packet file once, not delete the packet file, and inject found cookies into the device's Safari, you would type:
+{{{
+./derv.sh -d -c
+}}}
+
+
+=== Step 9 : Stop! ===
+
+[http://i.imgur.com/u0ywi.png]
+[http://i.imgur.com/EfhGo.png]
+
+When you're done collecting what you need, you will need to stop both *derv* and *pirni*.  This can be done by swiping up-right in Terminal, which is the equivalent of typing Control+C in Linux.
+
+You will need to swipe up-right / ctrl+c in both terminal windows. Remember: Drag two fingers left or right to switch between Terminal windows.
+
+After you are done, if you used the *-c* option, you can restore your Safari cookies by typing 
+{{{
+./derv.sh restore
+}}}
+this will restore your cookies to their original state.
