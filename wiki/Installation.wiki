@@ -6,17 +6,17 @@
 
 Other requirements for *derv*:
   * MobileTerminal
-  * Pirni
+  * [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]
   * root access 
 
-The following applications _should_ be included in the installation of MobileTerminal and Pirni:
+The following applications _should_ be included in the installation of MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]:
   * Bourne-Again SHell
   * grep
   * sed
   * libpcap
   * libnet
 
-MobileTerminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
 
 
 = Installation =
@@ -42,6 +42,9 @@ The five scripts you need to copy are:
   * derv-url.sh
 
 Once these files are copied, you can exit iPhoneBrowser or the SSH client.
+
+These files only need to be copied to the device once.  Once they have been copied, they will remain on the device, even after reboot.
+
 
 === Step 2 : Open MobileTerminal ===
 
@@ -76,6 +79,8 @@ Type
 ls
 }}}
 to make sure that all five derv scripts are in the current directory.
+
+
 If they aren't found in the current directory, they _could_ be in the directory:
 {{{
     /var/mobile/derv/
@@ -88,17 +93,19 @@ Navigate until MobileTerminal's current directory contains the 5 derv scripts.
 [http://i.imgur.com/rRZYm.png]
 
 By default, the scripts will not have proper file permissions to be run by root.
+
 We can fix this problem with a one-liner:
 {{{
 chmod 777 *.sh
 }}}
+
 We only have to run this command once; after the permissions have been set once, they remain that way, even after reboot.
 
 === Step 6 : Run the first script ===
 
 [http://i.imgur.com/BnJkK.png]
 
-*b4.sh* is the script which initializes Pirni with the appropriate filters, router IP address, and dump file name.
+*b4.sh* is the script which initializes [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] with the appropriate filters, router IP address, and dump file name.
 
 To start this script, simply type:
 {{{
@@ -106,7 +113,16 @@ To start this script, simply type:
 }}}
 Be sure to include the dot and slash before the *b4.sh* (the ./ tells MobileTerminal to run the file as a bash script).
 
-This will start pirni and show how many packets are captured.
+This will start [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] and show how many packets are captured.
+
+Note: *b4.sh* can also receive the target's IP address as an argument.  This is useful if you don't want to target an entire network; just one device on the network.
+
+To do this, type:
+{{{
+./b4.sh 192.168.1.2
+}}}
+where *192.168.1.2* is the IP address of your target.
+
 
 === Step 7 : Open a new Terminal and login as root (again) ===
 
@@ -115,7 +131,9 @@ To do this, simply swipe two fingers (at the same time) to the left (or right). 
 
 [http://i.imgur.com/ftOg1.png]
 
-We will need to login as root in this new terminal window as well! In case you don't remember how, type:
+We will need to login as root in this new terminal window as well.
+
+In case you don't remember how to login as root, type:
 {{{
 su
 }}}
@@ -126,7 +144,7 @@ then your password ... default is *alpine*, but you've already changed that, hav
 [http://i.imgur.com/DSXX9.png]
 
 In this new terminal window, now that you are logged in as root, you can run derv.sh!
-This script accepts arguments, so you can narrow-down what you want to filter from the sniffed packets.
+This script accepts arguments, so you can narrow-down what you want filtered from the sniffed packets.
 {{{
 ./derv.sh [options]
 }}}
@@ -139,7 +157,8 @@ The options include:
   * -d       _filters through the packet file *once* and does not delete anything. Useful if you want to see what's in the packet dump file, but don't want to lose the data._
 
 
-All of these options (except *restore*) can be used in combination with one another.
+All of these options (except *restore*) can be used in combination with one another:
+
 For example, if you wanted *derv* to only display plaintext passwords and URLs, then you would type:
 {{{
 ./derv.sh -p -u
