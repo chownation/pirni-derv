@@ -165,3 +165,9 @@ After you are done, if you used the *-c* option, you can restore your Safari coo
 ./derv.sh restore
 }}}
 this will restore your cookies to their original state.
+
+=== Step 10 : Exit ===
+
+MobileTerminal has a tendency to run in the background, using up resources.
+
+Once you are done with Terminal, tap-and-hold your finger in the terminal window until a menu appears, then select EXIT.  Lastly, confirm that you want to exit Terminal.
