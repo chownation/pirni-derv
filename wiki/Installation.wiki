@@ -32,7 +32,7 @@ Unfortunately, the *derv* scripts are not available through Cydia or Rock at thi
 
 However, since *derv* is only a few shell scripts, they simply need to be copied to the device and then executed.
 
-If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using programs like WinSCP, KiTTy, or some other SSH client.
+If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using programs like [http://winscp.net/eng/index.php WinSCP], [http://kitty.9bis.com/ KiTTy], or some other SSH client.
 
 Otherwise, you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] to easily copy the files onto the device.
 
