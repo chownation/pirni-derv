@@ -22,9 +22,12 @@ MobileTerminal and [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirn
 
 = Installation =
 
-Since *derv* is simply a few shell scripts, they only need to be copied to the device and executed using MobileTerminal.
+Unfortunately, *derv* is not available through Cydia or Rock at this time.
+
+However, since *derv* is only a few shell scripts, they simply need to be copied to the device and executed using MobileTerminal.
 
 If you already have [http://www.appleiphoneschool.com/openssh/ OpenSSH] installed on your device, you could copy the derv scripts using WinSCP, KiTTy, or some other SSH client.
+
 Otherwise you could use [http://code.google.com/p/iphonebrowser/ iPhoneBrowser] to easily copy the files onto the device.
 
 === Step 1 : Copy the shell scripts to your device ===
@@ -66,7 +69,7 @@ followed by root's password.  Note: The screen will not acknowledge that you are
 
 _The default password for root is *alpine*_
 
-_Having a default password for root is dangerous, you should change the password ASAP using the command:_
+_Note: Having a default password for root is dangerous! You should change the password as soon as possible using the command:_
 {{{
 passwd
 }}}
@@ -84,10 +87,10 @@ to make sure that all five derv scripts are in the current directory.
 
 If they aren't found in the current directory, they _could_ be in the directory:
 {{{
-    /var/mobile/derv/
+/var/mobile/derv/
 }}}
 
-Navigate until MobileTerminal's current directory contains the 5 derv scripts.
+Navigate until you are in the directory containing the derv scripts.
 
 === Step 5 : Change permissions ===
 
@@ -100,7 +103,7 @@ We can fix this problem with a one-liner:
 chmod 777 *.sh
 }}}
 
-We only have to run this command once; after the permissions have been set once, they remain that way, even after reboot.
+We only have to run this command once; after the permissions have been set, they remain that way, even after reboot.
 
 === Step 6 : Run the first script ===
 
@@ -116,7 +119,7 @@ Be sure to include the dot and slash before the *b4.sh* (the ./ tells MobileTerm
 
 This will start [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni] and show how many packets are captured.
 
-Note: *b4.sh* can also receive the target's IP address as an argument.  This is useful if you don't want to target an entire network; just one device on the network.
+Note: *b4.sh* can _also_ receive the target's IP address as an argument.  This is useful if you don't want to target an entire network; just one device on the network.
 
 To do this, type:
 {{{
@@ -160,7 +163,7 @@ The options include:
 
 All of these options (except *restore*) can be used in combination with one another:
 
-For example, if you wanted *derv* to only display plaintext passwords and URLs, then you would type:
+For example, if you wanted *derv* to only display sniffed plain-text passwords and URLs, then you would type:
 {{{
 ./derv.sh -p -u
 }}}
