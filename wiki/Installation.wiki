@@ -3,6 +3,7 @@
 = Requirements =
 
 ===Pirni, MobileTerminal, and the *derv* scripts can only be installed and run on _Jailbroken_ iPhones and iPod Touches!===
+===If you are interested in Jailbreaking your device, [http://www.iphonedownloadblog.com/2009/10/11/jailbreak-iphone-blackra1n-tutorial/ click here]===
 
 Other requirements for *derv*:
   * MobileTerminal
