@@ -11,6 +11,7 @@ Required jailbreak apps for *derv*:
   * root access 
 
 Mobile Terminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+
 If you don't know what "root access" is, you probably already have it.
 
 The following applications _should_ be included in the installation of Mobile Terminal and Pirni:
