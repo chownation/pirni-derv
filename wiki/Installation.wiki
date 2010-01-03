@@ -41,17 +41,19 @@ The five scripts you need to copy are:
 
 Once these files are copied, you can exit iPhoneBrowser or the SSH client.
 
-=== Step 2 : Execute the first script ===
+=== Step 2 : Open MobileTerminal ===
 
 Once these scripts are copied to the iPhone/iPod, we need to execute them.
 From your iPhone/iPod's home screen, open MobileTerminal by tapping on it.
+
 [http://imgur.com/rbknR.png]
 
+=== Step 3 : Login as root ===
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+To login as root, type {{{
+su
+}}} followed by root's password.
+_*The default password for root is alpine*_
+_Having a default password for root is dangerous, I suggest changing the password using the {{{
+passwd
+}}} command.
