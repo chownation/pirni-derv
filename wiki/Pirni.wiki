@@ -1,4 +1,4 @@
-#summary Link to PIRNI
+#summary Link to Pirni
 
 = Pirni =
 Pirni is an awesome network packet sniffer for iPhone and iPod Touch devices.
