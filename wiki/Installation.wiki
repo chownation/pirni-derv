@@ -9,8 +9,10 @@ Required jailbreak apps for *derv*:
   * [http://code.google.com/p/mobileterminal/ MobileTerminal]
   * [http://code.google.com/p/n1mda-dev/wiki/PirniUsageGuide Pirni]
   * root access 
+  * Gawk
+  * network-cmds
 
-Mobile Terminal and Pirni can both be installed using Cydia, Rock, or Icy.  Simply search for them and install.
+The above apps can be installed using Cydia, Rock, or Icy.  Simply search for them and install.
 
 If you don't know what "root access" is, you probably already have it.
 
